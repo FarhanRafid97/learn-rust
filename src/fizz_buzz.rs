@@ -1,8 +1,7 @@
-pub fn fizz_buzz_func(arg: i32) -> Vec<String> {
+pub fn fizz_buzz_func(n: i32) -> Vec<String> {
     let mut array: Vec<String> = Vec::new();
-    let mut count = 0;
-    loop {
-        count += 1;
+    let mut count = 1;
+    while count <= n {
         let mut string = String::from("");
         if count % 3 == 0 {
             string += "Fizz";
@@ -15,9 +14,7 @@ pub fn fizz_buzz_func(arg: i32) -> Vec<String> {
             string += &count.to_string();
         }
         array.push(string);
-        if count >= arg {
-            break;
-        }
+        count += 1;
     }
     return array;
 }
