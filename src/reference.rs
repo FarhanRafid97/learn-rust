@@ -13,3 +13,24 @@ fn do_stuff(s: &mut String) {
 fn prt(s: &mut String) {
     *s = String::from("Saya adalah suda berubah");
 }
+
+pub fn inspect(arg: &String) {
+    if arg.ends_with("s") {
+        println!("{} is plural", arg)
+    } else {
+        println!("{} is singular", arg)
+    }
+}
+pub fn change(arg: &mut String) {
+    arg.push_str("s")
+}
+pub fn eat(arg: &String) -> bool {
+    if arg.starts_with("b") && arg.contains("a") {
+        return true;
+    } else {
+        return false;
+    }
+}
+pub fn bedazzle(arg: &mut String) {
+    *arg = String::from("sparkly");
+}
